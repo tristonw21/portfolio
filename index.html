@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+====================================
+    TRISTON WHITE - PORTFOLIO WEBSITE
+    Created: June 2025
+    Description: Personal portfolio showcasing web development skills
+    Author: Triston White
+    Contact: tristonwhite21@gmail.com
+====================================
+-->
+
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Triston White - System Integrator & Student. Portfolio showcasing web development projects and skills.">
+    <meta name="author" content="Triston White">
+    <meta name="keywords" content="web developer, portfolio, system integrator, student, HTML, CSS, JavaScript">
+    
+    <!-- Page Title -->
+    <title>Triston White - Portfolio</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- External Resources -->
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <!-- 
+    ====================================
+        NAVIGATION BAR
+        Fixed header with responsive mobile menu
+    ====================================
+    -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo/Brand Name -->
+            <div class="nav-logo">
+                <a href="#home">Triston White</a>
+            </div>
+              <!-- Desktop Navigation Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            
+            <!-- Dark Mode Toggle -->
+            <div class="theme-toggle">
+                <button id="darkModeToggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                    <i class="fas fa-sun sun-icon"></i>
+                    <i class="fas fa-moon moon-icon"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Toggle (Hamburger Menu) -->
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 
+    ====================================
+        HERO SECTION
+        Main landing area with introduction and profile image
+    ====================================
+    -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <!-- Left Side: Text Content -->
+            <div class="hero-content">
+                <!-- Main Heading -->
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Triston</span></h1>
+                
+                <!-- Subtitle/Role -->
+                <p class="hero-subtitle">System Integrator & Student</p>
+                
+                <!-- Brief Description -->
+                <p class="hero-description">
+                    I create beautiful, functional websites and applications. I love to learn and grow as a developer, sharing my thoughts and ideas through my code.
+                </p>
+                
+                <!-- Call-to-Action Buttons -->
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            
+            <!-- Right Side: Profile Image -->
+            <div class="hero-image">
+                <img src="/pictures/me.png" alt="Triston White - Profile Photo" class="hero-profile-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    ====================================
+        ABOUT SECTION
+        Personal information and skills showcase
+    ====================================
+    -->
+    <section id="about" class="about">
+        <div class="container">
+            <!-- Section Title -->
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <!-- Personal Description -->
+                    <p>
+                        I'm a passionate web developer with a love for creating clean, efficient, and user-friendly websites. 
+                        With experience in both front-end and back-end technologies, I enjoy turning ideas into reality through code.
+                    </p>
+                    <p>
+                        When I'm not coding, you can find me exploring new technologies, reading tech blogs, or working on personal projects.
+                    </p>
+                    
+                    <!-- Skills Section -->
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <div class="skill-tags">
+                            <!-- Technical Skills -->
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Jinja2</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    ====================================
+        PROJECTS SECTION
+        Portfolio showcase with project cards
+    ====================================
+    -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <!-- Section Title -->
+            <h2 class="section-title">My Projects</h2>
+              <!-- Projects Carousel Container -->
+            <div class="projects-carousel">
+                
+                <!-- Carousel Navigation -->
+                <button class="carousel-btn carousel-btn-prev" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn carousel-btn-next" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                  <!-- Carousel Track -->
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        
+                        <!-- Clone of last slide for infinite loop -->
+                        <div class="project-card carousel-slide clone">
+                            <div class="project-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-database fa-3x"></i>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Project Three</h3>
+                                <p>A full-stack web application with user authentication and database integration.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">SQLite</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i> Live Demo
+                                    </a>
+                                    <a href="#" class="project-link">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Card 1 -->
+                        <div class="project-card carousel-slide">
+                            <!-- Project Image/Icon -->
+                            <div class="project-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-laptop-code fa-3x"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Information -->
+                            <div class="project-content">
+                                <h3>Project One</h3>
+                                <p>A responsive web application built with HTML, CSS, and JavaScript. Features include...</p>
+                                
+                                <!-- Technologies Used -->
+                                <div class="project-tech">
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+                                
+                                <!-- Project Links -->
+                                <div class="project-links">
+                                    <a href="#" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i> Live Demo
+                                    </a>
+                                    <a href="#" class="project-link">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 2 -->
+                        <div class="project-card carousel-slide">
+                            <!-- Project Image/Icon -->
+                            <div class="project-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-mobile-alt fa-3x"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Information -->
+                            <div class="project-content">
+                                <h3>Project Two</h3>
+                                <p>A mobile-first responsive website with modern design principles and smooth animations.</p>
+                                
+                                <!-- Technologies Used -->
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">Node.js</span>
+                                </div>
+                                
+                                <!-- Project Links -->
+                                <div class="project-links">
+                                    <a href="#" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i> Live Demo
+                                    </a>
+                                    <a href="#" class="project-link">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 3 -->
+                        <div class="project-card carousel-slide">
+                            <!-- Project Image/Icon -->
+                            <div class="project-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-database fa-3x"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Information -->
+                            <div class="project-content">
+                                <h3>Project Three</h3>
+                                <p>A full-stack web application with user authentication and database integration.</p>
+                                
+                                <!-- Technologies Used -->
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">SQLite</span>
+                                </div>
+                                
+                                <!-- Project Links -->
+                                <div class="project-links">
+                                    <a href="#" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i> Live Demo
+                                    </a>
+                                    <a href="#" class="project-link">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Clone of first slide for infinite loop -->
+                        <div class="project-card carousel-slide clone">
+                            <div class="project-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-laptop-code fa-3x"></i>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Project One</h3>
+                                <p>A responsive web application built with HTML, CSS, and JavaScript. Features include...</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i> Live Demo
+                                    </a>
+                                    <a href="#" class="project-link">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div> <!-- End carousel-track -->
+                </div> <!-- End carousel-track-container -->
+                
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                </div>
+                
+            </div> <!-- End projects-carousel -->
+        </div> <!-- End container -->
+    </section>
+
+    <!-- 
+    ====================================
+        CONTACT SECTION
+        Contact information and contact form
+    ====================================
+    -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <!-- Section Title -->
+            <h2 class="section-title">Get In Touch</h2>
+            
+            <div class="contact-content">
+                
+                <!-- Left Side: Contact Information -->
+                <div class="contact-info">
+                    <p>I'm always open to discussing new opportunities and interesting projects.</p>
+                    
+                    <!-- Contact Methods -->
+                    <div class="contact-methods">
+                        <!-- Email -->
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:tristonwhite21@gmail.com">tristonwhite21@gmail.com</a>
+                        </div>
+                        
+                        <!-- LinkedIn -->
+                        <div class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        </div>
+                        
+                        <!-- GitHub -->
+                        <div class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/tristonw21" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Side: Contact Form -->
+                <form class="contact-form" action="#" method="POST">
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    
+                    <!-- Message Field -->
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                
+            </div> <!-- End contact-content -->
+        </div> <!-- End container -->
+    </section>
+
+    <!-- 
+    ====================================
+        FOOTER
+        Copyright and final site information
+    ====================================
+    -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Triston White. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 
+    ====================================
+        JAVASCRIPT
+        Interactive functionality and animations
+    ====================================
+    -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
